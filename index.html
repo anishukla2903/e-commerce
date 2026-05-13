@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paws & Treats - Dog Shop</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">Paws & Treats</div>
+
+      <nav class="nav-links">
+        <a href="#products">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="login-open" class="auth-btn">Login</button>
+        <button id="signup-open" class="auth-btn auth-btn-primary">Sign Up</button>
+
+        <button id="cart-button" class="cart-btn">
+          🛒 Cart <span id="cart-count" class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Everything Your Dog Loves, In One Place</h1>
+        <p>
+          Premium dog food, tasty treats, durable belts, and essential medicines.
+          Because your dog deserves the best. 🐾
+        </p>
+        <a href="#products" class="btn-primary">Shop Dog Products</a>
+      </div>
+      <div class="hero-image">
+        <img
+          src="images/happydog.png"
+          alt="Happy dog in a pet shop"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTER + SEARCH -->
+  <section class="container filter-bar">
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="food">Food</button>
+      <button class="filter-btn" data-category="treats">Treats</button>
+      <button class="filter-btn" data-category="belts">Belts</button>
+      <button class="filter-btn" data-category="medicine">Medicine</button>
+    </div>
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search dog products..."
+      />
+    </div>
+  </section>
+
+  <!-- PRODUCTS LIST -->
+  <main id="products" class="container products-section">
+    <h2>Dog Products</h2>
+
+    <div class="products-grid" id="products-grid">
+      <!-- Food -->
+      <article class="product-card" data-category="food" data-name="Premium Chicken Kibble">
+        <img src="images/chicken.webp" alt="Premium Chicken Kibble" />
+        <h3>Premium Chicken Kibble</h3>
+        <p class="product-category">Food</p>
+        <p class="product-desc">High-protein dry food for active dogs.</p>
+        <p class="product-price" data-price="899">₹899</p>
+        <div class="product-card-footer">
+          <button class="btn-secondary add-to-cart">Add to Cart</button>
+          <a href="product-chicken.html" class="btn-link">View Details</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="food" data-name="Salmon & Rice Formula">
+        <img src="images/salmonoil.jpg" alt="Salmon & Rice Formula" />
+        <h3>Salmon & Rice Formula</h3>
+        <p class="product-category">Food</p>
+        <p class="product-desc">Gentle on stomach, rich in omega-3.</p>
+        <p class="product-price" data-price="1099">₹1,099</p>
+        <button class="btn-secondary add-to-cart">Add to Cart</button>
+      </article>
+
+      <!-- Treats -->
+      <article class="product-card" data-category="treats" data-name="Crunchy Bone Treats">
+        <img src="images/bone.webp" alt="Crunchy Bone Treats" />
+        <h3>Crunchy Bone Treats</h3>
+        <p class="product-category">Treats</p>
+        <p class="product-desc">Perfect reward for training sessions.</p>
+        <p class="product-price" data-price="299">₹299</p>
+        <button class="btn-secondary add-to-cart">Add to Cart</button>
+      </article>
+
+      <article class="product-card" data-category="treats" data-name="Peanut Butter Biscuits">
+        <img src="images/biscuit.jpg" alt="Peanut Butter Biscuits" />
+        <h3>Peanut Butter Biscuits</h3>
+        <p class="product-category">Treats</p>
+        <p class="product-desc">Crunchy, tasty & completely dog-safe.</p>
+        <p class="product-price" data-price="349">₹349</p>
+        <button class="btn-secondary add-to-cart">Add to Cart</button>
+      </article>
+
+      <!-- Belts -->
+      <article class="product-card" data-category="belts" data-name="Nylon Adjustable Belt">
+        <img src="images/lease.webp" alt="Nylon Adjustable Belt" />
+        <h3>Nylon Adjustable Belt</h3>
+        <p class="product-category">Belts</p>
+        <p class="product-desc">Durable and comfortable for daily walks.</p>
+        <p class="product-price" data-price="499">₹499</p>
+        <button class="btn-secondary add-to-cart">Add to Cart</button>
+      </article>
+
+      <article class="product-card" data-category="belts" data-name="Reflective Harness Belt">
+        <img src="images/harness.webp" alt="Reflective Harness Belt" />
+        <h3>Reflective Harness Belt</h3>
+        <p class="product-category">Belts</p>
+        <p class="product-desc">Reflective for night walks and extra safety.</p>
+        <p class="product-price" data-price="799">₹799</p>
+        <button class="btn-secondary add-to-cart">Add to Cart</button>
+      </article>
+
+      <!-- Medicine -->
+      <article class="product-card" data-category="medicine" data-name="Tick & Flea Spray">
+        <img src="images/tick and flea.jpg" alt="Tick & Flea Spray" />
+        <h3>Tick & Flea Spray</h3>
+        <p class="product-category">Medicine</p>
+        <p class="product-desc">Protects your dog from ticks & fleas.</p>
+        <p class="product-price" data-price="649">₹649</p>
+        <button class="btn-secondary add-to-cart">Add to Cart</button>
+      </article>
+
+      <article class="product-card" data-category="medicine" data-name="Multivitamin Chewables">
+        <img src="images/chews.jpg" alt="Multivitamin Chewables" />
+        <h3>Multivitamin Chewables</h3>
+        <p class="product-category">Medicine</p>
+        <p class="product-desc">Boosts immunity and joint health.</p>
+        <p class="product-price" data-price="559">₹559</p>
+        <button class="btn-secondary add-to-cart">Add to Cart</button>
+      </article>
+    </div>
+  </main>
+
+  <section class="container ai-section">
+
+  <h2>Recommended For Your Dog 🐶</h2>
+
+  <div id="ai-recommendations" class="products-grid">
+
+  </div>
+
+</section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about-section">
+    <div class="container about-content">
+      <h2>About Paws & Treats</h2>
+      <p>
+        We are a small dog-loving team dedicated to bringing fresh, safe, and
+        fun products for your furry family members. From healthy food to
+        playful treats and essential medicines, we’ve got your dog covered.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="container contact-content">
+      <h2>Contact Us</h2>
+      <p>Have questions? Reach out and we’ll get back to you quickly.</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Your name" required />
+        <input type="email" placeholder="Your email" required />
+        <textarea rows="3" placeholder="Your message..."></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CART MODAL (Cart + Payment Steps) -->
+  <div id="cart-modal" class="cart-modal-backdrop">
+    <div class="cart-modal">
+      <div class="cart-modal-header">
+        <h3>Your Cart</h3>
+        <button id="close-cart" class="close-cart-btn">✕</button>
+      </div>
+
+      <!-- Step 1: Cart items -->
+      <div id="cart-step-cart">
+        <div id="cart-items" class="cart-items">
+          <!-- Items added by JS -->
+        </div>
+        <div class="cart-modal-footer">
+          <div class="cart-total-row">
+            <span>Total:</span>
+            <span id="cart-total">₹0</span>
+          </div>
+          <div class="cart-footer-buttons">
+            <button id="clear-cart" class="btn-secondary">Clear Cart</button>
+            <button id="checkout-btn" class="btn-primary">Buy / Pay</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Payment form -->
+      <div id="cart-step-payment" class="payment-section hidden">
+        <h3>Payment Details</h3>
+        <p class="payment-note">
+          This is a demo checkout. Do not enter real card or UPI details.
+        </p>
+
+        <form id="payment-form" class="payment-form">
+          <label>
+            Full Name
+            <input type="text" id="pay-name" required />
+          </label>
+
+          <label>
+            Delivery Address
+            <textarea id="pay-address" rows="3" required></textarea>
+          </label>
+
+          <label>
+            Payment Method
+            <select id="pay-method" required>
+              <option value="">Select</option>
+              <option value="cod">Cash on Delivery</option>
+              <option value="card">Card</option>
+              <option value="upi">UPI</option>
+            </select>
+          </label>
+
+          <div id="extra-fields" class="extra-fields hidden">
+            <!-- JS will show small fake field based on method -->
+          </div>
+
+          <div class="payment-actions">
+            <button type="button" id="back-to-cart" class="btn-secondary-outline">
+              ← Back to Cart
+            </button>
+            <button type="submit" class="btn-primary">Pay Now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTH MODAL (Login / Sign Up) -->
+  <div id="auth-modal" class="auth-modal-backdrop">
+    <div class="auth-modal">
+      <div class="auth-header">
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="login">Login</button>
+          <button class="auth-tab" data-tab="signup">Sign Up</button>
+        </div>
+        <button id="auth-close" class="close-auth-btn">✕</button>
+      </div>
+
+      <!-- LOGIN -->
+      <div id="auth-login" class="auth-panel">
+        <form id="login-form" class="auth-form">
+          <label>
+            Email
+            <input type="email" id="login-email" required />
+          </label>
+          <label>
+            Password
+            <input type="password" id="login-password" required />
+          </label>
+          <button type="submit" class="btn-primary auth-submit-btn">Login</button>
+          <p class="auth-helper">
+            New here?
+            <button type="button" class="auth-inline-switch" data-tab-target="signup">
+              Create an account
+            </button>
+          </p>
+        </form>
+      </div>
+
+      <!-- SIGN UP -->
+      <div id="auth-signup" class="auth-panel hidden">
+        <form id="signup-form" class="auth-form">
+          <label>
+            Full Name
+            <input type="text" id="signup-name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" id="signup-email" required />
+          </label>
+          <label>
+            Password
+            <input type="password" id="signup-password" required minlength="6" />
+          </label>
+          <button type="submit" class="btn-primary auth-submit-btn">Sign Up</button>
+          <p class="auth-helper">
+            Already have an account?
+            <button type="button" class="auth-inline-switch" data-tab-target="login">
+              Login instead
+            </button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2025 Paws & Treats Dog Shop. All rights reserved.</p>
+    </div>
+  </footer>
+
+<!-- CART NOTIFICATION -->
+<div id="cart-toast" class="cart-toast">
+  Product added to cart 🛒
+</div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
