@@ -1,5 +1,3 @@
-# e-commerce
-
 Paws & Treats 🐶 – AI Powered Dog Shop
 
 Paws & Treats is a modern AI-powered pet eCommerce website built for dog lovers. The platform provides a smooth shopping experience for dog food, treats, belts, and medicines with smart product recommendations, cart management, authentication system, and responsive UI.
